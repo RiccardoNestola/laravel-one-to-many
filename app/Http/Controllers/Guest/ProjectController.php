@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -19,7 +20,8 @@ class ProjectController extends Controller
         $projects = Project::orderBy('date_added', 'DESC')->paginate(20);
 
         /* $projects = Project::paginate(20); */
-        return view("welcome",  compact("projects"));
+        $types = Type::all();
+        return view("welcome",  compact("projects","types"));
     }
 
     /**

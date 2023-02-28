@@ -49,7 +49,7 @@
     </div>
   </div>
   <div class="form-group row p-3">
-    <label for="technology_used" class="col-sm-2 col-form-label fw-bold">Tecnologia Usata</label>
+    <label for="technology_used" class="col-sm-2 col-form-label fw-bold">Tipo</label>
     <div class="col-sm-10">
        <select  class="form-control" id="type_id" name="type_id" >
             @foreach ($types as $type)
@@ -96,7 +96,9 @@
   <div class="form-group row p-3">
     <div class="col-sm-12">
       <a class="btn btn-secondary btn-sm" href="{{ route ("admin.projects.index") }}"><i class="fa-solid fa-chevron-left text-white"></i></a>
-      <button type="submit" class="btn btn-success btn-sm">Salva</button>
+      <button type="submit" class="btn btn-success btn-sm">
+            {{ $route == 'admin.projects.update' ? 'Aggiorna progetto' : 'Crea nuovo progetto'  }}
+        </button>
     </div>
     
   </div>

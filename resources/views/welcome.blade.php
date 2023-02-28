@@ -28,7 +28,7 @@
 					<li class="tag__item"><i class="fas fa-tag mr-2 px-1"></i>{{$project->category}}</li>
 					<li class="tag__item"><i class="fa-regular fa-calendar px-1"></i>{{$project->year}}</li>
 					<li class="tag__item play blue">
-						<a href="#"><i class="fa-solid fa-microchip px-1"></i></i>{{$project->technology_used}}</a>
+						<a href="#"><i class="fa-solid fa-microchip px-1"></i></i>{{$project->type->name}}</a>
 					</li>
 				</ul>
 			</div>

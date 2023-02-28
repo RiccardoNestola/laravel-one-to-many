@@ -11,7 +11,7 @@ class Project extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = array("title", "description", "category", "year", "technology_used", "thumb", "date_added");
+    protected $fillable = array("title", "description", "category", "year", 'type_id', "thumb", "date_added");
 
     public function isImageAUrl()
     {

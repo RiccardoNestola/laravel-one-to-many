@@ -25,8 +25,8 @@
             <p>{{$project->category}}</p>
             <h4>Anno</h4>
             <p>{{$project->year}}</p>
-            <h4>Tecnologia usata</h4>
-            <p>{{$project->technology_used}}</p>
+            <h4>Tipo</h4>
+            <p>{{$project->type->name}}</p>
             <h4>Data Progetto</h4>
             <p>{{$project->date_added}}</p>
             <p class="fw-bold">ID:{{$project->id}}</p>
