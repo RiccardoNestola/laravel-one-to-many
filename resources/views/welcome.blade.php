@@ -4,8 +4,11 @@
 
 <section class="light">
 	<div class="container py-2">
-		<div class="h1 text-center text-dark" id="pageHeaderTitle">Portfolio</div>
-@foreach ($projects as $project)
+		<div class=" text-left text-dark" id="main-title">
+			<h1>Hi, my name is Riccardo im a web developer, drummer and apple technician</h1>
+		</div>
+
+		@foreach ($projects as $project)
 		<article class="postcard light blue">
 			<a class="postcard__img_link" href="#">
 				@if (str_starts_with($project->thumb, 'http'))
