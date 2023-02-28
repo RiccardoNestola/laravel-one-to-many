@@ -17,4 +17,10 @@ class Project extends Model
     {
         return filter_var($this->thumb, FILTER_VALIDATE_URL);
     }
+
+
+    public function type() {
+        return $this->belongsTo(Type::class);
+}
+
 }
