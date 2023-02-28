@@ -51,13 +51,21 @@
   <div class="form-group row p-3">
     <label for="technology_used" class="col-sm-2 col-form-label fw-bold">Tecnologia Usata</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control @error('technology_used') is-invalid @enderror" id="technology_used" placeholder="Inserisci che strumenti hai utilizzato" name="technology_used" value="{{ old('technology_used' , $project->technology_used)}}">
-    @error('technology_used')
-            <div class="invalid-feedback">
-                {{ $message }}
-            </div>
-            @enderror    
+       <select  class="form-control" id="type_id" name="type_id" >
+            @foreach ($types as $type)
+                <option value="{{ $type->id }}"
+                    {{ old('type_id', $type->type_id) ==  $type->id ? 'selected' : '' }}>
+
+                    <span >
+                        {{ $type->name }}
+                    </span>
+                </option>
+            @endforeach
+        </select>  
     </div>
+
+
+
   </div>
   <div class="form-group row p-3">
     <label for="thumb" class="col-sm-2 col-form-label fw-bold">Immagine</label>
@@ -79,6 +87,11 @@
             </div>
             @enderror    
     </div>
+
+
+
+
+
   </div>
   <div class="form-group row p-3">
     <div class="col-sm-12">
