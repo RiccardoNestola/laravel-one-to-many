@@ -21,6 +21,7 @@ class ProjectController extends Controller
         'technology_used' => 'min:2',
         'thumb' => 'required|image',
         'date_added' => 'required|string|min:2|max:200',
+        'type_id' => 'required|exists:types,id'
 
     ];
 
